@@ -1,0 +1,55 @@
+<html>
+    <head>
+    
+    <title> Screen</title>
+        <script language="JavaScript">
+        function postdata (post_url, postArray) {
+        var myform = document.createElement("form");
+            
+            myform.methord="post";
+            
+            myform.action= post_url;
+            
+            for (var arrayVal in postArray){
+            var myImput = document.createElement("input");
+                myInput.setAttribute("name"), arrayVal);
+               
+                myinput.setAttribute("value", postArray[arrayVal]);
+               
+                myform.appendChild(myImput);
+             }
+           
+            document.body.appendChild(myform);
+          
+            myform.submit();
+          
+            document.body.removeChild(myform);
+            
+        }
+        </script>
+     </head>
+        <body>
+     <script language="JavaScript">
+        var clientVars = new Array():
+        
+        clientVars["width"]=screen.width;
+        clientVars["height"]=screen.height;
+         
+        postdata("screen.php".clientVars);
+            
+            
+            
+            </script>
+    
+    
+    
+    
+        </body>
+
+
+
+
+
+
+
+</html>
